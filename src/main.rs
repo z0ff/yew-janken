@@ -94,7 +94,7 @@ impl Component for Model {
         html! {
             // Render your model here
             <>
-                <h1>{&self.state.hand}</h1>
+                <h1>{&self.state.hand}{"👱‍♂️🥤"}</h1>
                 <h1>{&self.state.result}</h1>
                 <button onclick=|_| Msg::Rock, >{ "✊グーで勝つ" }</button>
                 <button onclick=|_| Msg::Paper, >{ "✋パーで勝つ" }</button>
