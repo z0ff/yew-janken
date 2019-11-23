@@ -39,8 +39,6 @@ enum Msg {
 }
 
 impl Component for Model {
-    // Some details omitted. Explore the examples to see more.
-
     type Message = Msg;
     type Properties = ();
 
@@ -92,14 +90,13 @@ impl Component for Model {
 
     fn view(&self) -> Html<Self> {
         html! {
-            // Render your model here
-            <>
+            <div>
                 <h1>{&self.state.hand}{"👱‍♂️🥤"}</h1>
                 <h1>{&self.state.result}</h1>
                 <button onclick=|_| Msg::Rock, >{ "✊グーで勝つ" }</button>
                 <button onclick=|_| Msg::Paper, >{ "✋パーで勝つ" }</button>
                 <button onclick=|_| Msg::Scissor, >{ "✌チョキで勝つ" }</button>
-            </>
+            </div>
         }
     }
 }
